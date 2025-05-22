@@ -79,7 +79,7 @@ export default function HomeScreen() {
 
   function renderUserItem({ item: user }: { item: User }) {
     return (
-      <ListItem key={user.id} bottomDivider>
+      <ListItem bottomDivider>
         <Avatar source={{ uri: user.avatarUrl }} />
         <ListItem.Content>
           <ListItem.Title>{user.name}</ListItem.Title>
@@ -151,6 +151,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    paddingTop: 50, // Adicionado padding top para afastar do topo
   },
   form: {
     marginTop: 8,
